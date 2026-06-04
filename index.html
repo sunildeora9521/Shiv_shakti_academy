@@ -57,7 +57,7 @@ section{position:relative;z-index:2;padding:88px 5%}
 .div{height:1px;background:linear-gradient(90deg,transparent,rgba(201,162,39,0.28),transparent);position:relative;z-index:2}
 
 /* ═══ HERO ═══ */
-#hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:96px 5% 60px;overflow:hidden}
+#hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:96px 5% 60px;overflow:hidden;position:relative;background:radial-gradient(ellipse at 70% 40%,rgba(14,34,80,0.6) 0%,var(--navy) 65%)}
 .hi{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;max-width:1140px;width:100%}
 .hl{animation:sL 1s cubic-bezier(.4,0,.2,1) both}
 @keyframes sL{from{opacity:0;transform:translateX(-48px)}to{opacity:1;transform:translateX(0)}}
@@ -113,7 +113,7 @@ section{position:relative;z-index:2;padding:88px 5%}
 .fdsc{font-size:0.8rem;color:var(--muted);line-height:1.72}
 
 /* ═══ EDU SHOWCASE ═══ */
-#edu-show{background:#050d1a;padding:80px 5%}
+#edu-show{background:#050d1a;padding:80px 5%;position:relative;z-index:2}
 .edu-title{text-align:center;margin-bottom:56px}
 .edu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px;max-width:1140px;margin:0 auto}
 .edu-card{position:relative;background:linear-gradient(145deg,rgba(10,22,42,0.95),rgba(4,12,24,0.98));border:1px solid rgba(201,162,39,0.18);border-radius:16px;overflow:hidden;min-height:280px;transition:border-color 0.35s,box-shadow 0.35s}
@@ -1268,8 +1268,13 @@ footer{position:relative;z-index:2;background:#020609;border-top:1px solid rgba(
    SCROLL REVEAL
 ════════════════════════════════ */
 (function(){
-  const obs=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting)en.target.classList.add('vis')})},{threshold:0.1});
-  document.querySelectorAll('.rev,.revl,.revr').forEach(el=>obs.observe(el));
+  // Immediately show elements already in viewport on load
+  const obs=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting)en.target.classList.add('vis')})},{threshold:0.05,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.rev,.revl,.revr').forEach(el=>{
+    // Force immediate reveal for hero section elements
+    if(el.closest('#hero')){el.classList.add('vis');return;}
+    obs.observe(el);
+  });
 })();
 
 /* ════════════════════════════════
