@@ -244,12 +244,15 @@ footer{position:relative;z-index:2;background:#020609;border-top:1px solid rgba(
 @keyframes wap{0%,100%{box-shadow:0 4px 18px rgba(37,211,102,0.52)}50%{box-shadow:0 4px 32px rgba(37,211,102,0.82)}}
 
 /* ═══ REVEAL ANIMATIONS ═══ */
-.rev{opacity:0;transform:translateY(34px);transition:opacity 0.7s cubic-bezier(.4,0,.2,1),transform 0.7s cubic-bezier(.4,0,.2,1)}
-.rev.vis{opacity:1;transform:translateY(0)}
-.revl{opacity:0;transform:translateX(-34px);transition:opacity 0.7s,transform 0.7s}
-.revl.vis{opacity:1;transform:translateX(0)}
-.revr{opacity:0;transform:translateX(34px);transition:opacity 0.7s,transform 0.7s}
-.revr.vis{opacity:1;transform:translateX(0)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(34px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeLeft{from{opacity:0;transform:translateX(-34px)}to{opacity:1;transform:translateX(0)}}
+@keyframes fadeRight{from{opacity:0;transform:translateX(34px)}to{opacity:1;transform:translateX(0)}}
+.rev{opacity:0}
+.rev.vis{animation:fadeUp 0.65s cubic-bezier(.4,0,.2,1) var(--delay,0s) both}
+.revl{opacity:0}
+.revl.vis{animation:fadeLeft 0.65s cubic-bezier(.4,0,.2,1) var(--delay,0s) both}
+.revr{opacity:0}
+.revr.vis{animation:fadeRight 0.65s cubic-bezier(.4,0,.2,1) var(--delay,0s) both}
 
 /* ═══ RESPONSIVE ═══ */
 @media(max-width:900px){
@@ -368,10 +371,10 @@ footer{position:relative;z-index:2;background:#020609;border-top:1px solid rgba(
       <p class="sd">What makes Shree Shiv Shakti Academy the preferred choice across Bhopalgarh & Jodhpur.</p>
     </div>
     <div class="fg">
-      <div class="fc rev" style="transition-delay:0.04s"><span class="fi">🏆</span><div class="ftit">विख्यात विशेषज्ञों द्वारा शिक्षण</div><div class="fdsc">Learn from renowned subject experts with mastery of Rajasthan competitive exam patterns.</div></div>
-      <div class="fc rev" style="transition-delay:0.1s"><span class="fi">📋</span><div class="ftit">पाक्षिक OMR शीट आधारित टेस्ट</div><div class="fdsc">Fortnightly OMR tests simulate real exam conditions and precisely track your progress.</div></div>
-      <div class="fc rev" style="transition-delay:0.16s"><span class="fi">🌟</span><div class="ftit">गुणवत्तापूर्ण एवं प्रभावी शिक्षा</div><div class="fdsc">Quality and highly effective education designed to maximise your exam success chances.</div></div>
-      <div class="fc rev" style="transition-delay:0.22s"><span class="fi">⏰</span><div class="ftit">सीमित सीटें – पहले आओ पहले पाओ</div><div class="fdsc">Limited batch size ensures every student gets personal attention. Enroll now!</div></div>
+      <div class="fc rev" style="--delay:0.04s"><span class="fi">🏆</span><div class="ftit">विख्यात विशेषज्ञों द्वारा शिक्षण</div><div class="fdsc">Learn from renowned subject experts with mastery of Rajasthan competitive exam patterns.</div></div>
+      <div class="fc rev" style="--delay:0.1s"><span class="fi">📋</span><div class="ftit">पाक्षिक OMR शीट आधारित टेस्ट</div><div class="fdsc">Fortnightly OMR tests simulate real exam conditions and precisely track your progress.</div></div>
+      <div class="fc rev" style="--delay:0.16s"><span class="fi">🌟</span><div class="ftit">गुणवत्तापूर्ण एवं प्रभावी शिक्षा</div><div class="fdsc">Quality and highly effective education designed to maximise your exam success chances.</div></div>
+      <div class="fc rev" style="--delay:0.22s"><span class="fi">⏰</span><div class="ftit">सीमित सीटें – पहले आओ पहले पाओ</div><div class="fdsc">Limited batch size ensures every student gets personal attention. Enroll now!</div></div>
     </div>
   </div>
 </section>
@@ -388,7 +391,7 @@ footer{position:relative;z-index:2;background:#020609;border-top:1px solid rgba(
   <div class="edu-grid">
 
     <!-- 1. Jellyfish Ocean -->
-    <div class="edu-card rev" style="transition-delay:0.05s">
+    <div class="edu-card rev" style="--delay:0.05s">
       <div class="edu-badge">🌊 Biology</div>
       <canvas class="edu-canvas" id="jelly-canvas"></canvas>
       <div class="edu-info">
@@ -398,7 +401,7 @@ footer{position:relative;z-index:2;background:#020609;border-top:1px solid rgba(
     </div>
 
     <!-- 2. Solar System -->
-    <div class="edu-card rev" style="transition-delay:0.1s">
+    <div class="edu-card rev" style="--delay:0.1s">
       <div class="edu-badge">🔭 Physics</div>
       <canvas class="edu-canvas" id="solar-canvas"></canvas>
       <div class="edu-info">
@@ -408,7 +411,7 @@ footer{position:relative;z-index:2;background:#020609;border-top:1px solid rgba(
     </div>
 
     <!-- 3. Chemical Reaction -->
-    <div class="edu-card rev" style="transition-delay:0.15s">
+    <div class="edu-card rev" style="--delay:0.15s">
       <div class="edu-badge">⚗️ Chemistry</div>
       <canvas class="edu-canvas" id="chem-canvas"></canvas>
       <div class="edu-info">
@@ -418,7 +421,7 @@ footer{position:relative;z-index:2;background:#020609;border-top:1px solid rgba(
     </div>
 
     <!-- 4. Constitution / Polity -->
-    <div class="edu-card rev" style="transition-delay:0.2s">
+    <div class="edu-card rev" style="--delay:0.2s">
       <div class="edu-badge">⚖️ Polity</div>
       <canvas class="edu-canvas" id="const-canvas"></canvas>
       <div class="edu-info">
@@ -428,7 +431,7 @@ footer{position:relative;z-index:2;background:#020609;border-top:1px solid rgba(
     </div>
 
     <!-- 5. Maths / Fibonacci -->
-    <div class="edu-card rev" style="transition-delay:0.25s">
+    <div class="edu-card rev" style="--delay:0.25s">
       <div class="edu-badge">📐 Mathematics</div>
       <canvas class="edu-canvas" id="math-canvas"></canvas>
       <div class="edu-info">
@@ -438,7 +441,7 @@ footer{position:relative;z-index:2;background:#020609;border-top:1px solid rgba(
     </div>
 
     <!-- 6. Geography / Earth Layers -->
-    <div class="edu-card rev" style="transition-delay:0.3s">
+    <div class="edu-card rev" style="--delay:0.3s">
       <div class="edu-badge">🌍 Geography</div>
       <canvas class="edu-canvas" id="geo-canvas"></canvas>
       <div class="edu-info">
@@ -469,9 +472,9 @@ footer{position:relative;z-index:2;background:#020609;border-top:1px solid rgba(
 <section id="stats">
   <div class="sr">
     <div class="si2 rev"><span class="sn2" data-target="500">0</span><span class="sl2">Students Enrolled</span></div>
-    <div class="si2 rev" style="transition-delay:0.1s"><span class="sn2" data-target="5">0</span><span class="sl2">Courses Available</span></div>
-    <div class="si2 rev" style="transition-delay:0.2s"><span class="sn2" data-target="24">0</span><span class="sl2">OMR Tests / Year</span></div>
-    <div class="si2 rev" style="transition-delay:0.3s"><span class="sn2" data-target="10">0</span><span class="sl2">% Early Discount</span></div>
+    <div class="si2 rev" style="--delay:0.1s"><span class="sn2" data-target="5">0</span><span class="sl2">Courses Available</span></div>
+    <div class="si2 rev" style="--delay:0.2s"><span class="sn2" data-target="24">0</span><span class="sl2">OMR Tests / Year</span></div>
+    <div class="si2 rev" style="--delay:0.3s"><span class="sn2" data-target="10">0</span><span class="sl2">% Early Discount</span></div>
   </div>
 </section>
 <div class="div"></div>
@@ -589,9 +592,9 @@ footer{position:relative;z-index:2;background:#020609;border-top:1px solid rgba(
       <div class="socs">हमसे जुड़े रहें — सभी platforms पर</div>
       <div class="socg">
         <a href="https://t.me/ShreeShivShaktiAcademy" target="_blank" class="sb stg rev"><span class="sico">✈️</span> Telegram</a>
-        <a href="https://in.linkedin.com/in/shree-shiv-shakti-academy-bhopalgarh-jodhpur-4510a0303" target="_blank" class="sb sli rev" style="transition-delay:0.08s"><span class="sico">💼</span> LinkedIn</a>
-        <a href="https://chat.whatsapp.com/EtL8SGkVhtk0U2dOS4L1ne" target="_blank" class="sb swa rev" style="transition-delay:0.16s"><span class="sico">💬</span> WhatsApp</a>
-        <a href="#" target="_blank" class="sb syt rev" style="transition-delay:0.24s" id="yt-link"><span class="sico">▶️</span> YouTube</a>
+        <a href="https://in.linkedin.com/in/shree-shiv-shakti-academy-bhopalgarh-jodhpur-4510a0303" target="_blank" class="sb sli rev" style="--delay:0.08s"><span class="sico">💼</span> LinkedIn</a>
+        <a href="https://chat.whatsapp.com/EtL8SGkVhtk0U2dOS4L1ne" target="_blank" class="sb swa rev" style="--delay:0.16s"><span class="sico">💬</span> WhatsApp</a>
+        <a href="#" target="_blank" class="sb syt rev" style="--delay:0.24s" id="yt-link"><span class="sico">▶️</span> YouTube</a>
       </div>
     </div>
   </div>
@@ -738,6 +741,8 @@ footer{position:relative;z-index:2;background:#020609;border-top:1px solid rgba(
 (function(){
   const c=document.getElementById('jelly-canvas');
   if(!c)return;
+  let started=false;
+  function startAnim(){
   const x=c.getContext('2d');
   let W,H,t=0,jellies=[];
 
@@ -834,6 +839,9 @@ footer{position:relative;z-index:2;background:#020609;border-top:1px solid rgba(
     requestAnimationFrame(loop);
   }
   resize();window.addEventListener('resize',resize);loop();
+  } // end startAnim
+  const io=new IntersectionObserver(([e])=>{if(e.isIntersecting&&!started){started=true;startAnim();}},{threshold:0.1});
+  io.observe(c.parentElement||c);
 })();
 
 /* ════════════════════════════════
@@ -842,6 +850,8 @@ footer{position:relative;z-index:2;background:#020609;border-top:1px solid rgba(
 (function(){
   const c=document.getElementById('solar-canvas');
   if(!c)return;
+  let started=false;
+  function startAnim(){
   const x=c.getContext('2d');
   let W,H,t=0;
   const planets=[
@@ -913,6 +923,9 @@ footer{position:relative;z-index:2;background:#020609;border-top:1px solid rgba(
     requestAnimationFrame(loop);
   }
   resize();window.addEventListener('resize',resize);loop();
+  } // end startAnim
+  const io=new IntersectionObserver(([e])=>{if(e.isIntersecting&&!started){started=true;startAnim();}},{threshold:0.1});
+  io.observe(c.parentElement||c);
 })();
 
 /* ════════════════════════════════
@@ -921,6 +934,8 @@ footer{position:relative;z-index:2;background:#020609;border-top:1px solid rgba(
 (function(){
   const c=document.getElementById('chem-canvas');
   if(!c)return;
+  let started=false;
+  function startAnim(){
   const x=c.getContext('2d');
   let W,H,t=0,bonds=[],sparks=[];
 
@@ -1021,6 +1036,9 @@ footer{position:relative;z-index:2;background:#020609;border-top:1px solid rgba(
     requestAnimationFrame(loop);
   }
   resize();window.addEventListener('resize',resize);loop();
+  } // end startAnim
+  const io=new IntersectionObserver(([e])=>{if(e.isIntersecting&&!started){started=true;startAnim();}},{threshold:0.1});
+  io.observe(c.parentElement||c);
 })();
 
 /* ════════════════════════════════
@@ -1029,6 +1047,8 @@ footer{position:relative;z-index:2;background:#020609;border-top:1px solid rgba(
 (function(){
   const c=document.getElementById('const-canvas');
   if(!c)return;
+  let started=false;
+  function startAnim(){
   const x=c.getContext('2d');
   let W,H,t=0;
   function resize(){W=c.width=c.offsetWidth;H=c.height=c.offsetHeight;}
@@ -1111,6 +1131,9 @@ footer{position:relative;z-index:2;background:#020609;border-top:1px solid rgba(
     requestAnimationFrame(loop);
   }
   resize();window.addEventListener('resize',resize);loop();
+  } // end startAnim
+  const io=new IntersectionObserver(([e])=>{if(e.isIntersecting&&!started){started=true;startAnim();}},{threshold:0.1});
+  io.observe(c.parentElement||c);
 })();
 
 /* ════════════════════════════════
@@ -1119,6 +1142,8 @@ footer{position:relative;z-index:2;background:#020609;border-top:1px solid rgba(
 (function(){
   const c=document.getElementById('math-canvas');
   if(!c)return;
+  let started=false;
+  function startAnim(){
   const x=c.getContext('2d');
   let W,H,t=0,revealAngle=0;
   function resize(){W=c.width=c.offsetWidth;H=c.height=c.offsetHeight;}
@@ -1171,6 +1196,9 @@ footer{position:relative;z-index:2;background:#020609;border-top:1px solid rgba(
     requestAnimationFrame(loop);
   }
   resize();window.addEventListener('resize',resize);loop();
+  } // end startAnim
+  const io=new IntersectionObserver(([e])=>{if(e.isIntersecting&&!started){started=true;startAnim();}},{threshold:0.1});
+  io.observe(c.parentElement||c);
 })();
 
 /* ════════════════════════════════
@@ -1179,6 +1207,8 @@ footer{position:relative;z-index:2;background:#020609;border-top:1px solid rgba(
 (function(){
   const c=document.getElementById('geo-canvas');
   if(!c)return;
+  let started=false;
+  function startAnim(){
   const x=c.getContext('2d');
   let W,H,t=0;
   function resize(){W=c.width=c.offsetWidth;H=c.height=c.offsetHeight;}
@@ -1243,6 +1273,9 @@ footer{position:relative;z-index:2;background:#020609;border-top:1px solid rgba(
     requestAnimationFrame(loop);
   }
   resize();window.addEventListener('resize',resize);loop();
+  } // end startAnim
+  const io=new IntersectionObserver(([e])=>{if(e.isIntersecting&&!started){started=true;startAnim();}},{threshold:0.1});
+  io.observe(c.parentElement||c);
 })();
 
 /* ════════════════════════════════
@@ -1261,20 +1294,31 @@ footer{position:relative;z-index:2;background:#020609;border-top:1px solid rgba(
 (function(){
   const subjs=[{icon:'📐',name:'Mathematics'},{icon:'⚛',name:'Physics'},{icon:'⚗',name:'Chemistry'},{icon:'🧬',name:'Biology'},{icon:'📊',name:'Economics'},{icon:'🌍',name:'Geography'},{icon:'⚖',name:'Polity & Law'},{icon:'📜',name:'History'},{icon:'💡',name:'Ethics'},{icon:'💻',name:'Technology'},{icon:'🔭',name:'Science'},{icon:'📖',name:'Current Affairs'},{icon:'🗣',name:'Hindi / English'},{icon:'🧮',name:'Reasoning'},{icon:'📗',name:'Rajasthan GK'},{icon:'🇮🇳',name:'India GK'},{icon:'🏛',name:'Civics'},{icon:'🌐',name:'World GK'}];
   const g=document.getElementById('subjGrid');
-  g.innerHTML=subjs.map((s,i)=>`<div class="sp rev" style="transition-delay:${i*0.035}s"><span class="si">${s.icon}</span><div class="sn">${s.name}</div></div>`).join('');
+  g.innerHTML=subjs.map((s,i)=>`<div class="sp rev" style="--delay:${i*0.035}s"><span class="si">${s.icon}</span><div class="sn">${s.name}</div></div>`).join('');
 })();
 
 /* ════════════════════════════════
-   SCROLL REVEAL
+   SCROLL REVEAL — robust version
 ════════════════════════════════ */
 (function(){
-  // Immediately show elements already in viewport on load
-  const obs=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting)en.target.classList.add('vis')})},{threshold:0.05,rootMargin:'0px 0px -40px 0px'});
-  document.querySelectorAll('.rev,.revl,.revr').forEach(el=>{
-    // Force immediate reveal for hero section elements
-    if(el.closest('#hero')){el.classList.add('vis');return;}
-    obs.observe(el);
+  function revealAll(){
+    document.querySelectorAll('.rev,.revl,.revr').forEach(el=>el.classList.add('vis'));
+  }
+  // Safety net: if page fully loaded and still hidden, force show everything
+  window.addEventListener('load',function(){
+    setTimeout(revealAll,1200);
   });
+  // Primary: IntersectionObserver with generous rootMargin
+  if(!('IntersectionObserver' in window)){revealAll();return;}
+  const obs=new IntersectionObserver(entries=>{
+    entries.forEach(en=>{
+      if(en.isIntersecting){
+        en.target.classList.add('vis');
+        obs.unobserve(en.target);
+      }
+    });
+  },{threshold:0,rootMargin:'0px 0px 60px 0px'});
+  document.querySelectorAll('.rev,.revl,.revr').forEach(el=>obs.observe(el));
 })();
 
 /* ════════════════════════════════
