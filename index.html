@@ -276,6 +276,20 @@ footer{border-top:1px solid var(--border);padding:50px 0 30px;text-align:center;
   .app-feats{grid-template-columns:1fr 1fr}
 }
 @media(max-width:480px){.app-feats{grid-template-columns:1fr}.wa-float span{display:none}.wa-float{padding:14px}}
+
+/* ===== PERF / ANTI-JITTER ===== */
+html{overflow-x:hidden;width:100%}
+.bg,.nebula{transform:translateZ(0);backface-visibility:hidden}
+.nebula,.float-ico,.shooting,.mq-track,.orbit{will-change:transform}
+.earth .tex{will-change:background-position}
+@media (max-width:768px){
+  .nebula{filter:blur(48px);opacity:.26}
+  .float-ico,.shooting,.n4{display:none}
+  .earth .tex{animation-duration:60s}
+}
+@media (prefers-reduced-motion:reduce){
+  .nebula,.float-ico,.shooting,.orbit,.mq-track,.earth .tex{animation:none!important}
+}
 </style>
 </head>
 <body>
@@ -450,14 +464,14 @@ footer{border-top:1px solid var(--border);padding:50px 0 30px;text-align:center;
       <p>Har exam ke liye structured batch — abhi enroll karein aur 10% early bird discount paayein.</p>
     </div>
     <div class="course-grid">
-      <div class="course reveal"><div class="cem">📝</div><h3>CET</h3><div class="csub">Common Eligibility Test</div><div class="price"><span class="now">₹3,150</span><span class="was">₹3,500</span></div><div class="save">Save ₹350 · before June 15</div><a href="https://wa.me/919660027382?text=Mujhe%20CET%20batch%20join%20karna%20hai" class="cbtn">Enroll →</a></div>
-      <div class="course popular reveal"><div class="badge">POPULAR</div><div class="cem">⚖️</div><h3>RAS Pre</h3><div class="csub">Rajasthan Admin Services</div><div class="price"><span class="now">₹5,400</span><span class="was">₹6,000</span></div><div class="save">Save ₹600 · before June 15</div><a href="https://wa.me/919660027382?text=Mujhe%20RAS%20Pre%20batch%20join%20karna%20hai" class="cbtn">Enroll →</a></div>
-      <div class="course reveal"><div class="cem">🏫</div><h3>REET</h3><div class="csub">Teacher Eligibility Exam</div><div class="price"><span class="now">₹4,500</span><span class="was">₹5,000</span></div><div class="save">Save ₹500 · before June 15</div><a href="https://wa.me/919660027382?text=Mujhe%20REET%20batch%20join%20karna%20hai" class="cbtn">Enroll →</a></div>
-      <div class="course reveal"><div class="cem">🗺️</div><h3>Rajasthan One Day</h3><div class="csub">State Level Exams</div><div class="price"><span class="now">₹4,050</span><span class="was">₹4,500</span></div><div class="save">Save ₹450 · before June 15</div><a href="https://wa.me/919660027382?text=Mujhe%20Rajasthan%20One%20Day%20batch%20join%20karna%20hai" class="cbtn">Enroll →</a></div>
-      <div class="course reveal"><div class="cem">🇮🇳</div><h3>India One Day</h3><div class="csub">National Level Exams</div><div class="price"><span class="now">₹3,600</span><span class="was">₹4,000</span></div><div class="save">Save ₹400 · before June 15</div><a href="https://wa.me/919660027382?text=Mujhe%20India%20One%20Day%20batch%20join%20karna%20hai" class="cbtn">Enroll →</a></div>
+      <div class="course reveal"><div class="cem">📝</div><h3>CET</h3><div class="csub">Common Eligibility Test</div><div class="price"><span class="now">₹3,150</span><span class="was">₹3,500</span></div><div class="save">Save ₹350 · before July 1</div><a href="https://wa.me/919660027382?text=Mujhe%20CET%20batch%20join%20karna%20hai" class="cbtn">Enroll →</a></div>
+      <div class="course popular reveal"><div class="badge">POPULAR</div><div class="cem">⚖️</div><h3>RAS Pre</h3><div class="csub">Rajasthan Admin Services</div><div class="price"><span class="now">₹5,400</span><span class="was">₹6,000</span></div><div class="save">Save ₹600 · before July 1</div><a href="https://wa.me/919660027382?text=Mujhe%20RAS%20Pre%20batch%20join%20karna%20hai" class="cbtn">Enroll →</a></div>
+      <div class="course reveal"><div class="cem">🏫</div><h3>REET</h3><div class="csub">Teacher Eligibility Exam</div><div class="price"><span class="now">₹4,500</span><span class="was">₹5,000</span></div><div class="save">Save ₹500 · before July 1</div><a href="https://wa.me/919660027382?text=Mujhe%20REET%20batch%20join%20karna%20hai" class="cbtn">Enroll →</a></div>
+      <div class="course reveal"><div class="cem">🗺️</div><h3>Rajasthan One Day</h3><div class="csub">State Level Exams</div><div class="price"><span class="now">₹4,050</span><span class="was">₹4,500</span></div><div class="save">Save ₹450 · before July 1</div><a href="https://wa.me/919660027382?text=Mujhe%20Rajasthan%20One%20Day%20batch%20join%20karna%20hai" class="cbtn">Enroll →</a></div>
+      <div class="course reveal"><div class="cem">🇮🇳</div><h3>India One Day</h3><div class="csub">National Level Exams</div><div class="price"><span class="now">₹3,600</span><span class="was">₹4,000</span></div><div class="save">Save ₹400 · before July 1</div><a href="https://wa.me/919660027382?text=Mujhe%20India%20One%20Day%20batch%20join%20karna%20hai" class="cbtn">Enroll →</a></div>
       <div class="course reveal" style="display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:linear-gradient(160deg,rgba(56,225,255,.12),rgba(124,77,255,.1))"><div class="cem">🐕</div><h3 style="font-size:1.2rem">Free Damru App</h3><div class="csub">Har course ke saath</div><p style="color:var(--text2);font-size:.88rem;margin-bottom:16px">AI tutor, daily quiz & test series — bilkul free.</p><a href="Shiva%20Academy.apk" download="Shiva Academy.apk" class="cbtn">⬇️ Download App</a></div>
     </div>
-    <div class="fee-note">* Discounted fees valid before June 15, 2026. फीस संबंधी जानकारी के लिए कॉल करें: 9660027382</div>
+    <div class="fee-note">* Discounted fees valid before July 1, 2026. फीस संबंधी जानकारी के लिए कॉल करें: 9660027382</div>
   </div>
 </section>
 
@@ -558,8 +572,8 @@ document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
 function animCount(el){var t=+el.dataset.count,suf=el.dataset.suffix||'',d=1600,st=performance.now();function tick(now){var p=Math.min((now-st)/d,1);var v=Math.floor((1-Math.pow(1-p,3))*t);el.textContent=v+suf;if(p<1)requestAnimationFrame(tick)}requestAnimationFrame(tick)}
 var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){animCount(e.target);cio.unobserve(e.target)}})},{threshold:.5});
 document.querySelectorAll('[data-count]').forEach(function(el){cio.observe(el)});
-// countdown to June 15 2026
-var target=new Date('2026-06-15T23:59:59+05:30').getTime();
+// countdown to July 1 2026
+var target=new Date('2026-07-01T23:59:59+05:30').getTime();
 function cd(){var now=Date.now(),diff=target-now;if(diff<0)diff=0;var d=Math.floor(diff/864e5),h=Math.floor(diff%864e5/36e5),m=Math.floor(diff%36e5/6e4),s=Math.floor(diff%6e4/1e3);function p(n){return(n<10?'0':'')+n}document.getElementById('cd-d').textContent=p(d);document.getElementById('cd-h').textContent=p(h);document.getElementById('cd-m').textContent=p(m);document.getElementById('cd-s').textContent=p(s)}
 cd();setInterval(cd,1000);
 </script>
